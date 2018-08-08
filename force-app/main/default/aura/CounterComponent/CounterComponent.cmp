@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="countValue" type="Integer" default="0"/>
+
+    <div class="c-container">
+        <lightning:layout horizontalAlign="space">
+            <lightning:layoutItem flexibility="auto" padding="around-small">
+                <lightning:button variant="brand" label="-" onclick="{! c.handleDecrement }" />
+                  <ui:outputText value="{!v.countValue}" class="slds-text-heading_large slds-m-horizontal_small"/>
+                <lightning:button variant="brand" label="+" onclick="{! c.handleIncrement }" />
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>	
