@@ -1,3 +1,27 @@
-<aura:component>
+<aura:component implements="flexipage:availableForAllPageTypes"
+                controller="PromiseComponentController">
+  
+  <!-- A list of Users -->
+  <aura:attribute name="users" type="User[]" />
+
+  <div class="c-container">
+    <lightning:layout horizontalAlign="space">
+        <lightning:layoutItem flexibility="auto" padding="around-small">
+          <lightning:button variant="brand" label="Get All Users" onclick="{! c.getUsersList }" />
+        </lightning:layoutItem>
+        
+    </lightning:layout>
+    <lightning:layout horizontalAlign="space">
+      <lightning:layoutItem flexibility="auto" padding="around-small">
+        <ul>
+          <aura:iteration items="{! v.users }" var="user">
+
+            <li><ui:outputText value="{! user.Name + '-' + user.Username}" class="slds-text-body_small"/></li>
+              
+          </aura:iteration>
+        </ul>
+      </lightning:layoutItem>
+    </lightning:layout>
+  </div>
 
 </aura:component>	
