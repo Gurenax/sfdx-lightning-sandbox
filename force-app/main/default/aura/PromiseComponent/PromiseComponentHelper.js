@@ -1,8 +1,16 @@
 ({
+    lightningPromisify : function(component, fn) {
+        return fn(component).then(
+            $A.getCallback(result => result),
+            $A.getCallback(error => error)
+        )
+    },
+    
     getAllUsersPromise : function(component) {
         // Get Apex Controller Method
         const action = component.get('c.getAllUsers')
 
+        // Call the promise
         return new Promise((resolve, reject) => {
             // Set parameters if needed
             // action.setParams({})
@@ -12,11 +20,9 @@
                 const state = response.getState()
 
                 if(state === 'SUCCESS') {
-                    const allUsers = response.getReturnValue()
-                    resolve(allUsers)
+                    resolve(response.getReturnValue())
                 } else {
-                    const errors = response.getError()
-                    reject(errors)
+                    reject(response.getError())
                 }
             })
 
