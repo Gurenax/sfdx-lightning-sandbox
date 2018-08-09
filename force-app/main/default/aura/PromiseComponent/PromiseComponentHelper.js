@@ -7,7 +7,7 @@
             // Set parameters if needed
             // action.setParams({})
 
-            // Buikd the Action
+            // Build the Action
             action.setCallback(this, response => {
                 const state = response.getState()
 
