@@ -1,2 +1,3 @@
 # Ignore .sfdx folder
 .sfdx
+.DS_Store
