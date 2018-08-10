@@ -3,7 +3,6 @@
     // e.g. if the apex class method is getUsers, this function should be named something else (i.e. getUsersList)
     getUsersList : function(component, event, helper) {
         helper.lightningPromisify(component, helper.getAllUsersPromise).then(result => {
-            console.log('allUsers', result)
             component.set('v.users', result)
         })
         .catch(error => {
