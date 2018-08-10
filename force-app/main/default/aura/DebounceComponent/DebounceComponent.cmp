@@ -1,3 +1,19 @@
-<aura:component>
+<aura:component implements="flexipage:availableForAllPageTypes">
+  
+  <!-- A test count -->
+  <aura:attribute name="debounceCounterValue" type="Integer" default="0"/>
+
+  <div class="c-container">
+    <lightning:layout horizontalAlign="space">
+        <lightning:layoutItem flexibility="auto" padding="around-small">
+          <lightning:button variant="brand" label="Debounced Increase Number" onclick="{! c.increaseNumber }" />
+        </lightning:layoutItem>
+    </lightning:layout>
+    <lightning:layout horizontalAlign="space">
+        <lightning:layoutItem flexibility="auto" padding="around-small">
+          <ui:outputText value="{! v.debounceCounterValue }" class="slds-text-heading_large"/>
+        </lightning:layoutItem>
+    </lightning:layout>
+  </div>
 
 </aura:component>	
