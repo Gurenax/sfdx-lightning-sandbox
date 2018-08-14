@@ -1,1 +1,3 @@
-<aura:event type="APPLICATION" description="Event template"/>
+<aura:event type="COMPONENT" description="Event template">
+  <aura:attribute name="payload" type="Map" /> <!-- Should define Map instead of Object - Map is a key-value pair in Lightning -->
+</aura:event>
