@@ -1,0 +1,10 @@
+<aura:component>
+  <aura:registerEvent name="createSomethingToParent" type="c:ParentCreateSomething"/>
+
+  <lightning:layout horizontalAlign="space">
+    <lightning:layoutItem flexibility="auto" padding="around-small">
+      <h1>Event Child 1 Component</h1>
+      <lightning:button variant="brand" label="Fire Event from Child 1" onclick="{! c.fireEvent }" />
+    </lightning:layoutItem>
+  </lightning:layout>
+</aura:component>	
