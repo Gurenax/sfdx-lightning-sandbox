@@ -1,0 +1,13 @@
+<aura:component>
+  <aura:attribute name="messageValue" type="String" default="" />
+  <aura:method name="sendMessageToChild2" action="{! c.receiveMessage }" >
+    <aura:attribute name="message" type="String" />
+  </aura:method>
+
+  <lightning:layout horizontalAlign="space">
+    <lightning:layoutItem flexibility="auto" padding="around-small">
+      <h1>Event Child 2 Component</h1>
+      <ui:inputText label="Message" value="{! v.messageValue }"/>
+    </lightning:layoutItem>
+  </lightning:layout>
+</aura:component>	
