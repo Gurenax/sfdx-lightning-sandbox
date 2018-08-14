@@ -8,10 +8,14 @@
 
 
 ## Description of Files and Directories
-1. CounterComponent
-2. PromiseComponent
-3. DebounceComponent
-
+1. CounterComponent - Component which demonstrates a basic counter
+2. PromiseComponent - Component which demonstrates a promise
+3. DebounceComponent - Component which demonstrates a debounce function
+4. Event Components - Component which demonstrates messaging using events
+  - EventParentComponent - *Parent Component*
+  - EventChild1Component - *Child Component 1*
+  - EventChild2Component - *Child Component 2*
+  - ParentCreateSomething - *event template*
 
 ## Issues
 
