@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+  <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+
+  <!-- Event Handler for Parent -->
+  <aura:handler name="createSomethingToParent" event="c:ParentCreateSomething" action="{!c.handleCreateSomething}"/>
+
+
+  <lightning:layout horizontalAlign="space">
+    <lightning:layoutItem flexibility="auto" padding="around-small">
+      <h1>Event Parent Component</h1>
+      <c:EventChild1Component aura:id="Child1"></c:EventChild1Component>
+      <c:EventChild2Component aura:id="Child2"></c:EventChild2Component>
+    </lightning:layoutItem>
+  </lightning:layout>
+</aura:component>	
