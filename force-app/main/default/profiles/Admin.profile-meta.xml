@@ -11,11 +11,11 @@
     </classAccesses>
     <custom>false</custom>
     <tabVisibilities>
-        <tab>Debounce</tab>
+        <tab>React_Component</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>Promise</tab>
+        <tab>standard-Account</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
