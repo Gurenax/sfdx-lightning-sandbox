@@ -16,6 +16,7 @@
   - EventChild1Component - *Child Component 1*
   - EventChild2Component - *Child Component 2*
   - ParentCreateSomething - *event template*
+5. React Component - Component which displays a React App. *(Salesforce API v39.0 only)*
 
 ## Issues
 
