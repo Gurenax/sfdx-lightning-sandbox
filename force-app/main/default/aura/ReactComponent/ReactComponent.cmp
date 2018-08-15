@@ -1,3 +1,8 @@
-<aura:component implements="flexipage:availableForAllPageTypes">
+<aura:component access="global" implements="flexipage:availableForAllPageTypes">
+
+  <ltng:require scripts="/resource/react/App.bundle.js"
+                afterScriptsLoaded="{!c.reactInit}"
+                beforeLoadingResources="{!c.reactBeforeLoad}"/>
+  <div aura:id="container"/>
 
 </aura:component>	
