@@ -1,4 +1,7 @@
-<aura:component access="global" implements="flexipage:availableForAllPageTypes">
+<aura:component access="global" implements="flexipage:availableForAllPageTypes"
+                                controller="ReactComponentController">
+                                
+  <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
 
   <ltng:require scripts="/resource/react/App.bundle.js"
                 afterScriptsLoaded="{!c.reactInit}"
