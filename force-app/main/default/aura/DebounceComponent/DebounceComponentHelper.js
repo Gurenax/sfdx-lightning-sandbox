@@ -1,10 +1,17 @@
 ({
     lightningDebounce : function(fn, ms) {
-        const m = !ms ? 0 : ms
-        return function() {
-            const args = arguments
+        const delayinMs = !ms ? 0 : ms
+        return (...args) => {
             clearTimeout(window.timeoutId)
-            window.timeoutId = setTimeout(() => fn.apply(this, args), m)
+            window.timeoutId = setTimeout(() => fn.apply(this, args), delayinMs)
+        }
+    },
+
+    lightningDebounceWithCallback : function(fn, ms) {
+        const delayinMs = !ms ? 0 : ms
+        return (...args) => {
+            clearTimeout(window.timeoutId)
+            window.timeoutId = setTimeout($A.getCallback(() => fn.apply(this, args)), delayinMs)
         }
     },
 
@@ -16,9 +23,9 @@
     /**
      * Sameed's Debounce - Need to test this
      */
-    debounce: function (fn, delayInMs) {
+    sameedDebounce: function (fn, delayInMs) {
         const delay = !delayInMs ? 0 : delayInMs
-        const timeoutId = fn.toString(); // generating a unique string by stringifying the function
+        const timeoutId = fn.toString() // generating a unique string by stringifying the function
         return (...args) => {
             clearTimeout(window[timeoutId])
             window[timeoutId] = setTimeout($A.getCallback(() => fn.apply(this, args)), delay)
