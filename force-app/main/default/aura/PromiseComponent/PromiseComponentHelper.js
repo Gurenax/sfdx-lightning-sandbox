@@ -2,7 +2,7 @@
     lightningPromisify : function(component, fn) {
         return fn(component).then(
             $A.getCallback(result => result),
-            $A.getCallback(error => error)
+            $A.getCallback(error => { throw error })
         )
     },
     
